@@ -1,4 +1,5 @@
 // Importação do ws
+const http = require('http');
 const { WebSocketServer } = require('ws');
 
 // Importação do dotenv
@@ -6,8 +7,13 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // Criação do servidor
-const wss = new WebSocketServer({ port: process.env.PORT || 8080 });
-console.log('servidor conectado');
+const server = http.createServer();
+const wss = new WebSocketServer({ server });
+
+
+server.listen(process.env.PORT || 8080, () => {
+    console.log('Servidor rodando');
+});
 
 function onlineUsers() {
     const onlineMessages ={
