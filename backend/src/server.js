@@ -2,14 +2,13 @@
 const express = require('express');
 const http = require('http');
 const { WebSocketServer } = require('ws');
-require('dotenv').config();
 
 const app = express()
 const server = http.createServer(app);
 
 
 app.get('/', (req, res) => {
-    res.send('Servidor WebSocket rodando 🚀');
+    res.send('Servidor WebSocket rodando');
 });
 // Importação do dotenv
 const dotenv = require('dotenv');
