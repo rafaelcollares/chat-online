@@ -1,18 +1,28 @@
 // Importação do ws
+const express = require('express');
 const http = require('http');
 const { WebSocketServer } = require('ws');
+require('dotenv').config();
 
+const app = express()
+const server = http.createServer(app);
+
+
+app.get('/', (req, res) => {
+    res.send('Servidor WebSocket rodando 🚀');
+});
 // Importação do dotenv
 const dotenv = require('dotenv');
 dotenv.config();
 
 // Criação do servidor
-const server = http.createServer();
 const wss = new WebSocketServer({ server });
 
 
-server.listen(process.env.PORT || 8080, () => {
-    console.log('Servidor rodando');
+const PORT = process.env.PORT || 8080;
+
+server.listen(PORT,() => {
+    console.log(`Servidor rodando na porta ${PORT}`);
 });
 
 function onlineUsers() {
