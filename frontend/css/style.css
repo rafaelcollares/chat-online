@@ -1,0 +1,250 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: url("../images/Whats\ App\ Wallpaper.jpg");
+    --text: #000;
+    --bg: #FFFFFF;
+    --button: #128C7E;
+    --outline: #128C7E;
+    --text-button:#fff;
+    --bg-form: #F5F5F5;
+    --bg-input:#fff;
+  --header-bg: #ffffff;
+
+    color: var(text);
+    transition: 0.3 ease;
+}
+
+body.dark{
+    background: url("../images/Dark\ Zap.jpg");
+    --text: #fff;
+    --bg: #212121;
+    --button: #ddd;
+    --text-button:#000;
+    color: var(text);
+      --header-bg: #2a3942;
+
+    --bg-form: #191919;
+    --bg-input:#212121;
+      transition: 0.3 ease;
+    --outline: #fafafa;
+}
+
+.dark-mode i {
+    position: fixed;
+    top: .5rem;
+    left: .5rem;
+    font-size: 1.5rem;
+    color: #2C3E50;
+    cursor: pointer;
+}
+
+.light-mode i{
+position: fixed;
+    top: .5rem;
+    left: .5rem;
+    font-size: 1.5rem;
+    color: #DDD;
+cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+.container{
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    width: 100%;
+    max-width: 22rem;
+    background-color: var(--bg);
+    border-radius: 5px;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login.dark{
+    background-color: var(--bg);
+}
+
+
+.login > h2{
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.login-input{
+    border-radius: 5px;
+    padding: .5rem;
+    font-size: 1rem;
+    font-family: 600;
+    background-color: #E5E5E5;
+    color: #202C33;
+    outline: none;
+    border: none;
+}
+
+
+.login-input:focus{
+    outline: 2px solid #128C7E;
+}
+
+.login-button{
+    padding: .75rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    background: var(--button);
+    cursor: pointer;
+    color: var(--text-button);
+}
+
+.login-button:hover{
+    background-color: #128C7E;
+}
+
+.chat{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat-messages{
+    flex-grow: 1;
+    padding: 1.85rem 1.85rem 5.5rem;
+    display: flex;
+    gap: .5rem;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.chat-form{
+    background-color: var(--bg-form);
+    padding: 0.85rem 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.chat-input{
+    flex-grow: 1;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: var(--bg-input);
+    font-size: 1rem;
+    color: var(--text);
+    outline: none;
+}
+
+.chat-input:focus{
+    outline: 1px solid var(--outline);
+}
+
+.chat-button{
+    background: none;
+    border: none;
+    color: var(--button);
+    cursor: pointer;
+}
+
+
+
+.chat-button > span{
+    font-size: 1.8rem;
+}
+
+.user-conected{
+    max-width: 50%;
+    min-height: 40px; 
+    flex: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0 auto;
+    flex-direction: column;
+    background-color: var(--bg-form);
+    color: var(--text);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.chat-messages > div{
+    padding: .7rem;
+    width: 100%;
+    max-width: 250px;
+    font-size: .9rem;
+    font-weight: 500;
+    line-height: 22px;
+}
+.messages-self{
+    background-color: #DCF8C6;
+    color: #202C33;
+    border-radius: 10px 10px 0px 10px;
+    align-self: flex-end;
+    max-width: 65%;
+    word-wrap: break-word;
+    
+
+}
+
+.user-online{
+    right: 0;
+    top: 1rem;
+    color: brown;
+    font-size: 1rem;
+    position: fixed;
+    display: flex;
+    gap: .5rem;
+}
+
+
+
+
+
+.messages-other{
+     background-color: #FFFFFF;
+    color: #202C33;
+    border-radius: 0px 10px 10px 10px;
+    align-self: flex-start;
+    max-width: 65%;
+    word-wrap: break-word;
+}
+
+.message-sender{
+    display: block;
+    margin-bottom: 0.9rem;
+    font-weight: 700;
+
+}
+
